@@ -16,7 +16,7 @@ app.use('/', userRoute);
 app.use('/admin', adminRoute);
 
 app.all('*', (req, res) => {
-    res.sendFile(__dirname + '/public/index.html')
+    res.status(400).json({message:'this is just an api'})
 })
 
 
