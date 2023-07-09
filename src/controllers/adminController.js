@@ -18,7 +18,6 @@ const login=async(req,res)=>{
 const getUsers = async (req, res) => {
     try {
         pool.query('SELECT * FROM users').then(respo => {
-            console.log(respo.rows);
             res.status(200).json(respo.rows)
         })
     } catch (err) {
